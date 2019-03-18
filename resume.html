@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>陈米佳 | python初级程序员</title>
+    <style type="text/css">::-moz-selection {
+    background: #333;
+    color: #fff;
+    text-shadow: none;
+}
+
+::-webkit-selection {
+    background: #333;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #333;
+    color: #fff;
+    text-shadow: none;
+}
+
+body {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft Yahei", "\5b8b\4f53", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    background: #e0e0e0;
+}
+
+a {
+    color: #369;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    background: #222;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#252525), to(#0a0a0a));
+    background: -webkit-linear-gradient(top, #252525, #0a0a0a);
+    background: -moz-linear-gradient(top, #252525, #0a0a0a);
+    background: -ms-linear-gradient(top, #252525, #0a0a0a);
+    background: -o-linear-gradient(top, #252525, #0a0a0a);
+    background: linear-gradient(top, #252525, #0a0a0a);
+    -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+    -ms-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+    -o-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+}
+
+nav.preparing {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    width: 800px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav li {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #fff;
+    font-weight: bold;
+    line-height: 40px;
+    height: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0 12px;
+}
+
+nav a:hover {
+    background: #f9f9f9;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f9f9f9), to(#e5e5e5));
+    background: -webkit-linear-gradient(top, #f9f9f9, #e5e5e5);
+    background: -moz-linear-gradient(top, #f9f9f9, #e5e5e5);
+    background: -ms-linear-gradient(top, #f9f9f9, #e5e5e5);
+    background: -o-linear-gradient(top, #f9f9f9, #e5e5e5);
+    background: linear-gradient(top, #f9f9f9, #e5e5e5);
+    color: #373737;
+}
+
+nav li:last-child a {
+    background: #d24d21;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#d54e21), to(#b4421c));
+    background: -webkit-linear-gradient(top, #d54e21, #b4421c);
+    background: -moz-linear-gradient(top, #d54e21, #b4421c);
+    background: -o-linear-gradient(top, #d54e21, #b4421c);
+    background: linear-gradient(top, #d54e21, #b4421c);
+    color: #fff;
+    text-shadow: #b5421c 1px 1px 1px;
+}
+
+nav li:last-child a:hover {
+    color: #ffac90;
+    text-shadow: #666 1px 1px 1px;
+}
+
+div {
+    width: 800px;
+    margin: 0 auto;
+}
+
+section {
+    position: relative;
+    overflow:hidden;
+}
+
+section:before {
+    content: "\273d";
+    text-align: center;
+    line-height: 1;
+    position: absolute;
+    width: 800px;
+    top: 20px;
+}
+
+section:first-child:before {
+    display: none;
+}
+
+h2 {
+    font-family: "Microsoft Yahei", "\5b8b\4f53", Georgia, serif;
+    font-size: 20px;
+    text-shadow: 0 1px 0 #fff;
+    margin: 0 0 0 -30px;
+    padding: 70px 0 0 0;
+    -webkit-transition: margin 300ms ease-in-out;
+    -moz-transition: margin 300ms ease-in-out;
+    -ms-transition: margin 300ms ease-in-out;
+    -o-transition: margin 300ms ease-in-out;
+    transition: margin 300ms ease-in-out;
+}
+
+.desktop h2:hover {
+    color: #369;
+    cursor: pointer;
+}
+
+.nojs h2,
+section:target h2 {
+    margin: 0;
+}
+
+.nojs section:first-child h2 {
+    padding: 30px 0 0 0;
+}
+
+h2:before {
+    content: "\21e8";
+    text-align: center;
+    width: 30px;
+    height: auto;
+    display: inline-block;
+}
+
+img {
+    width: 120px;
+    height: 180px;
+    padding: 4px;
+    border: 1px solid #369;
+    float: right;
+    margin: 10px 20px 0 0;
+    background: #f5f5f5;
+}
+
+h3 {
+    font-size: 16px;
+    margin: 20px 0 10px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+p.print {
+    display: none;
+}
+
+span,
+time {
+    display: inline-block;
+    padding-right: 10px;
+    width: 140px;
+    font-weight: normal;
+}
+
+footer {
+    width: 800px;
+    margin: 40px auto 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+footer p:before {
+    content: "\ab\3000";
+}
+
+footer p:after {
+    content: "\3000\bb";
+}
+
+footer a {
+    text-decoration: none;
+}
+
+/* pad portrait */
+@media(max-width:850px) {
+    nav,
+    div,
+    section:before,
+    footer {
+        width: 100%;
+    }
+    nav ul,
+    section h2 ~ :not(img) {
+        padding: 0 20px;
+    }
+    nav a {
+        font-size: 14px;
+    }
+    img {
+        margin: 10px 40px 0 0;
+    }
+    h2,
+    .nojs h2,
+    section:target h2 {
+        margin: 0 0 0 20px;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        -o-transition: none;
+        transition: none;
+    }
+    h2:before {
+        display: none;
+    }
+}
+
+/* smartphone landscape */
+@media(max-width:650px) {
+    nav,
+    img {
+        display: none;
+    }
+    section:first-child h2 {
+        padding: 30px 0 0 0;
+    }
+}
+
+/* smartphone portrait */
+@media(max-width:450px) {
+    section:before {
+        display: none;
+    }
+    h2,
+    .nojs h2,
+    .nojs section:first-child h2,
+    section:first-child h2,
+    section:target h2 {
+        padding: 20px;
+        margin: 0;
+        background: #999;
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#aaa), to(#888));
+        background: -webkit-linear-gradient(top, #aaa, #888);
+        background: -moz-linear-gradient(top, #aaa, #888);
+        background: -ms-linear-gradient(top, #aaa, #888);
+        background: -o-linear-gradient(top, #aaa, #888);
+        background: linear-gradient(top, #aaa, #888);
+        text-shadow: 0 1px 0 #ccc;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #555;
+    }
+    h2:after {
+        content: "\25bc";
+        float: right;
+        color: #777;
+    }
+    .mobile h2:after {
+        content: "\25c0";
+        color: #444;
+    }
+    .mobile section:target h2 {
+        background: #bbb;
+        border-bottom: 1px solid #999;
+    }
+    .mobile section:target h2:after {
+        content: "\25bc";
+        color: #777;
+    }
+    .mobile section h2 ~ * {
+        display: none;
+    }
+    .mobile section:target h2 ~ :not(img) {
+        display: block;
+    }
+    .mobile section:target h2 ~ p.print {
+        display: none;
+    }
+    p {
+        margin: 20px 0;
+    }
+    span {
+        display: inline-block;
+        width: 90px;
+    }
+    time {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+/* smartphone */
+@media only screen and (min-device-width:320px) and (max-device-width:480px) {}
+
+/* print */
+@media print {
+    * {
+        background: none;
+        color: #000;
+    }
+    nav,
+    img {
+        display: none;
+    }
+    section h2,
+    .desktop section h2 {
+        margin: 0 0 0 20px;
+        text-shadow: none;
+    }
+    section:first-child h2,
+    .desktop section:first-child h2 {
+        padding: 20px 0 0;
+    }
+    section:first-child:before,
+    h2:before {
+        display: none;
+    }
+    a {
+        text-decoration: none;
+    }
+    a:after {
+        content: " [ " attr(href) " ] ";
+    }
+    a.print:after {
+        display: none;
+    }
+    p.screen {
+        display: none;
+    }
+    p.print {
+        display: block;
+    }
+}
+@page {
+    margin: 30mm 15mm;
+}</style>
+</head>
+<body class="nojs">
+    <div>
+        <section id="information">
+            <h2>基本信息</h2>
+            <p><span>姓名：</span>陈米佳</p>
+            <p><span>性别：</span>男</p>
+            <p><span>出生年月：</span>1990年7月</p>
+            <p><span>移动电话：</span>17388950023</p>
+        </section>
+        <section id="evaluation">
+            <h2>自我评价</h2>
+            <p>本人从某个机缘巧合了解到Python，和人工智能，通过自身兴趣从两年前在职期间开始自学Python语言，于去年10月离职系统学习Python和web开发和初步学习爬虫相关，了解web前后端，HTML，CSS，JS, 和web相关框架Django，数据库相关MySql, 可以用Django制作简单网页，MySQL简单增删改查，和构建基础的数据库结构。。通过学习Python也在增强学习自己的英语能力，希望能够更好的应用于工作之中。</p>
+        </section>
+        <section id="experiences">
+            <h2>相关工作经验</h2>
+            <h3><time>2017-12：2018-9:</time>湖南诚钰网络有限公司</h3>
+            <p>负责校园市场的开发，校园团队建设，参与公众号的需求开发，调研了解学生洗衣需求和日常生活需求</p>
+            <h3><time>2018-9：至今</time>学习Python</h3>
+            <p>通过web开发和爬虫为出发点，学习Python语言，然后准备学习JS开发其他语言技能</p>
+            <h3><time>2018-10：2019-1</time>学习基础部分</h3>
+            <p>前期通过视频教程，书籍教程，了解Python基础知识，如：函数，模块，字符串，列表，元组，等Python语言基础</p>
+            <h3><time>2019-1:2019-3</time>做一些简单demo</h3>
+            <p>通过几个月的不断学习，了解更多编程相关的应用知识，不断更新自己的技能包，不断了解web相关，数据库相关，爬虫相关，版本库相关操作工具，
+            自己通过网站资料寻找，做一些简单的网页页面，基础爬虫，MySQL数据的一些基础操作，目前可以独自借鉴开发一些基础网页，然后准备继续开发Js第二门语言。。</p>
+        </section>
+        <section id="education">
+            <h2>教育背景</h2>
+            <p><time>2009-2012</time>湖南信息科学职业学院</p>
+            <p><time>2012-2016</time>各个城市学习社会实践能力</p>
+            <p><time>2016-至今</time>回到长沙，18年后转行</p>
+        </section>
+        <section id="languages">
+            <h2>外语能力</h2>
+            <p>基础的听说读写，每天15分钟学英语</p>
+        </section>
+        <section id="about">
+            <h2>求职方向</h2>
+            <p class="screen">通过近期的学习，不断完善自身，现在想求职Python初级程序员岗位，web后端方向，
+            薪资要求同等职位薪水在10—20%的浮动都可以接受。</p>
+            <p class="print">本人，爱好广泛，喜欢看书，慢跑锻炼，为人乐观，现在吃苦能力不错，喜欢接受挑战</p>
+            <p class="print">职业技能：能写常规HTML，CSS，JavaScript代码，了解爬虫，能写简易爬虫，熟练运行Python常用爬虫库。 了解Mysql数据库。熟练运行增删改查。 可以运用django构建简单的网页。 熟悉Git版本工具。 </p>
+        </section>
+    </div>
+    <footer>
+        <p>2019 &copy; <a href="#" title="forcefront.com"></a>个人简历</p>
+    </footer>
+       <script type="text/javascript">var Resume = function(window, document) {
+
+    var start = NaN;
+    var dest = NaN;
+    var hash;
+    var step;
+
+    var scroll = function() {
+        var temp;
+        if(window.innerWidth < 650 || start == document.documentElement.scrollTop + document.body.scrollTop) {
+            window.location.hash = hash;
+            start = dest = NaN;
+            return;
+        }
+        start = document.documentElement.scrollTop + document.body.scrollTop;
+        temp = start > dest ? start + Math.floor((dest - start)/10) : start + Math.ceil((dest - start)/10);
+        if(Math.abs(dest - temp) > 1) {
+            window.scrollTo(0, temp);
+            step = window.setTimeout(scroll, 16);
+        } else {
+            window.scrollTo(0, dest);
+            window.location.hash = hash;
+            start = dest = NaN;
+        }
+    };
+
+    var init = function() {
+        var sect = document.getElementsByTagName('section');
+        var nav = document.createElement('nav');
+        var ul = document.createElement('ul');
+        Array.prototype.forEach.call(sect, function(s, i) {
+            ul.innerHTML += '<li><a href="#' + s.id + '">' + s.querySelector('h2').innerHTML + '</a></li>';
+            s.addEventListener('click', function(e) {
+                dest = s.offsetTop; 
+                hash = '#' + s.id;
+                clearTimeout(step);
+                scroll();
+            }, false);
+        });
+        nav.appendChild(ul);
+        nav.addEventListener('click', function(e) {
+            e.preventDefault();
+            if(e.target.tagName.toLowerCase() == 'a') {
+                dest = document.getElementById(e.target.getAttribute('href').substring(1)).offsetTop;
+                hash = e.target.getAttribute('href');
+                clearTimeout(step);
+                scroll();
+            }
+        }, false);
+        nav.className = 'preparing';
+        document.body.insertBefore(nav, document.querySelector('div'));
+        window.addEventListener('resize', function() {
+            document.body.className = window.innerWidth < 650 ? 'mobile' : 'desktop';
+        }, false);
+        window.addEventListener('load', function() {
+            if(window.location.hash == '') {
+                window.location.hash = '#' + sect[0].id;
+            }
+            document.body.className = window.innerWidth < 650 ? 'mobile' : 'desktop';
+            nav.className = '';
+        }, false);
+    };
+    
+    init();
+
+};
+
+new Resume(window, document);</script>
+</body>
+</html>
